@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Justin M. Lu</title>
+  <title>Justin Lu</title>
   <style>
     body {
       font-family: sans-serif;
@@ -14,6 +14,22 @@
       width: 180px;
       max-width: 100%;
       height: auto;
+      animation: headshot-spin 16s linear infinite;
+    }
+
+    @keyframes headshot-spin {
+      from {
+        transform: perspective(600px) rotateX(-10deg) rotateY(0turn);
+      }
+      to {
+        transform: perspective(600px) rotateX(-10deg) rotateY(1turn);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .headshot {
+        animation: none;
+      }
     }
 
     a {
